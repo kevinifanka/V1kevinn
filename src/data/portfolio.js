@@ -22,13 +22,21 @@ import {
   siAdobephotoshop,
   siAndroid,
   siDart,
+  siDiscord,
   siFlutter,
   siGit,
+  siGithub,
+  siGmail,
   siHtml5,
+  siInstagram,
+  siLinkedin,
   siNodedotjs,
   siPython,
+  siSpotify,
   siSupabase,
 } from "simple-icons";
+
+const EMAIL = "kevinifanka98@gmail.com";
 
 const img = (seed, w = 900, h = 1200) =>
   `https://picsum.photos/seed/${seed}/${w}/${h}?grayscale`;
@@ -38,14 +46,56 @@ export const profile = {
   role: "Creative Developer & Designer",
   location: "North, Sumatra",
   timezone: "Asia/Jakarta",
-  email: "kevinifanka98@gmail.com",
+  email: EMAIL,
   year: "2026",
   available: "Available for work",
+
+  /* Kartu sosial di bagian Contact.
+     - platform : nama yang tampil
+     - handle   : username / akun yang tampil di bawah nama
+     - href     : link tujuan saat kartu diklik
+     - copy     : true = kartu menyalin `handle` ke clipboard (tanpa link), mis. Discord
+     - color    : (opsional) warna saat di-hover, menggantikan warna brand
+     ⚠ Ganti semua "GANTI" dengan akunmu, atau hapus baris platform yang tidak dipakai. */
   socials: [
-    { label: "Instagram", href: "https://instagram.com/" },
-    { label: "LinkedIn", href: "https://linkedin.com/" },
-    { label: "GitHub", href: "https://github.com/" },
-    { label: "Dribbble", href: "https://dribbble.com/" },
+    {
+      platform: "LinkedIn",
+      handle: "@GANTI",
+      href: "https://www.linkedin.com/in/GANTI",
+      icon: siLinkedin,
+    },
+    {
+      platform: "Instagram",
+      handle: "@GANTI",
+      href: "https://instagram.com/GANTI",
+      icon: siInstagram,
+    },
+    {
+      platform: "GitHub",
+      handle: "@kevinifanka",
+      href: "https://github.com/kevinifanka",
+      icon: siGithub,
+      color: "#ffffff", // logo GitHub aslinya hitam -> putih supaya terlihat di latar gelap
+    },
+    {
+      platform: "Email",
+      handle: EMAIL,
+      href: `mailto:${EMAIL}`,
+      icon: siGmail,
+      action: "Send email",
+    },
+    {
+      platform: "Spotify",
+      handle: "GANTI",
+      href: "https://open.spotify.com/user/GANTI",
+      icon: siSpotify,
+    },
+    {
+      platform: "Discord",
+      handle: "GANTI",
+      icon: siDiscord,
+      copy: true,
+    },
   ],
 };
 

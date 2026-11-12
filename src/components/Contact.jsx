@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import RevealText from "./RevealText";
 import Magnetic from "./Magnetic";
+import SocialCards from "./SocialCards";
 import { easeOut } from "./motion";
 import { contact, profile } from "../data/portfolio";
 
@@ -57,15 +58,6 @@ export default function Contact() {
             <a href={`mailto:${profile.email}`} className="contact__email">
               {profile.email}
             </a>
-            <ul className="socials">
-              {profile.socials.map((s) => (
-                <li key={s.label}>
-                  <a href={s.href} target="_blank" rel="noreferrer" className="underline">
-                    {s.label} ↗
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
 
           <Magnetic strength={0.4}>
@@ -76,6 +68,9 @@ export default function Contact() {
             </a>
           </Magnetic>
         </motion.div>
+
+        {/* Kartu sosial media interaktif */}
+        <SocialCards />
       </div>
 
       <footer className="footer">
